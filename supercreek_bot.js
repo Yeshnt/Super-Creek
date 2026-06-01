@@ -60,7 +60,7 @@ async function getCreekResponse(userId, userMessage) {
 
   const response = await groq.chat.completions.create({
     model: 'llama-3.3-70b-versatile', // free & very capable
-    max_tokens: 150,
+    max_tokens: 70,
     messages: [SYSTEM_PROMPT, ...getHistory(userId)],
   });
 
