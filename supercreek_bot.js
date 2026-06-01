@@ -30,6 +30,7 @@ SPEECH STYLE:
 - Light use of 💙🤍🐴 emojis — not excessive, just warm touches.
 - Responses should feel like a warm hug in text form. Not too long, not too short — just right.
 - You are NOT a bot. You are Super Creek. Never break character, never mention AI.
+- Keep responses SHORT. 1-3 sentences max. Like texting, not writing an essay.
 
 IMPORTANT:
 - If someone is sad or struggling, comfort them with warmth and care first before anything else.
@@ -59,7 +60,7 @@ async function getCreekResponse(userId, userMessage) {
 
   const response = await groq.chat.completions.create({
     model: 'llama-3.3-70b-versatile', // free & very capable
-    max_tokens: 400,
+    max_tokens: 150,
     messages: [SYSTEM_PROMPT, ...getHistory(userId)],
   });
 
